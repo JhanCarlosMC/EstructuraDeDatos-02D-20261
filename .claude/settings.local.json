@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"$word = New-Object -ComObject Word.Application; $word.Visible = $false; $doc = $word.Documents.Open\\('D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\Workshop collections y generics.docx'\\); $doc.Content.Text; $doc.Close\\(\\); $word.Quit\\(\\); [System.Runtime.Interopservices.Marshal]::ReleaseComObject\\($word\\) | Out-Null\")",
+      "Bash(find \"D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\WorkshopCollectionGeneric\\\\src\" -type f -name \"*.java\" 2>/dev/null | head -20)",
+      "Bash(cd \"D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\WorkshopCollectionGeneric\\\\src\\\\main\\\\java\\\\co\\\\edu\\\\uniquindio\" && mkdir -p ejercicio1 ejercicio2 ejercicio3 ejercicio4 ejercicio5 ejercicio6 ejercicio7 ejercicio8 ejercicio9 ejercicio10)",
+      "Bash(cd \"D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\WorkshopCollectionGeneric\" && mvn compile -q)",
+      "Bash(cd \"D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\WorkshopCollectionGeneric\" && javac --version)",
+      "Bash(cd \"D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\WorkshopCollectionGeneric\\\\src\\\\main\\\\java\" && javac -encoding UTF-8 co/edu/uniquindio/ejercicio1/*.java 2>&1 | head -20)",
+      "Bash(cd \"D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\WorkshopCollectionGeneric\\\\src\\\\main\\\\java\" && javac -encoding UTF-8 co/edu/uniquindio/ejercicio2/*.java && javac -encoding UTF-8 co/edu/uniquindio/ejercicio7/*.java && javac -encoding UTF-8 co/edu/uniquindio/ejercicio8/*.java && echo \"Compilación exitosa\")",
+      "Bash(cd \"D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\WorkshopCollectionGeneric\\\\src\\\\main\\\\java\" && javac -encoding UTF-8 co/edu/uniquindio/ejercicio7/*.java && echo \"Ejercicio 7: OK\" && javac -encoding UTF-8 co/edu/uniquindio/ejercicio8/*.java && echo \"Ejercicio 8: OK\")",
+      "Bash(cd \"D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\WorkshopCollectionGeneric\\\\src\\\\main\\\\java\" && for dir in co/edu/uniquindio/ejercicio*/; do echo \"Compilando $dir\"; javac -encoding UTF-8 \"$dir\"*.java 2>&1 | grep -i error && echo \"Errores en $dir\" || echo \"✓ $dir OK\"; done)",
+      "Bash(cd \"D:\\\\Workspaces\\\\Uniquindio 2026-1\\\\EstructuraDatos\\\\WorkshopCollectionGeneric\" && find . -name \"*.class\" -type f -delete && echo \"Archivos .class eliminados\")"
+    ]
+  }
+}
